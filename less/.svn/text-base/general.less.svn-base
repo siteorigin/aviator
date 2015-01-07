@@ -1,0 +1,30 @@
+body {
+	background: #FAFAFA;
+
+
+	&.has-sidebar {
+		@sidebar_width: 30%;
+
+		#primary {
+			padding-right: 20px;
+			float: left;
+			.box-sizing( border-box );
+			width: 100% - @sidebar_width;
+		}
+
+		#secondary {
+			padding-left: 20px;
+			float: right;
+			.box-sizing( border-box );
+			width: @sidebar_width;
+		}
+	}
+
+	&.page-template-home-panels-php {
+		#primary {
+			padding-right: 0;
+			float: none;
+			width: auto;
+		}
+	}
+}
