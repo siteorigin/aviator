@@ -4,22 +4,26 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php aviator_posted_on(); ?>
-		</div><!-- .entry-meta -->
+			<div class="entry-meta">
+				<?php aviator_posted_on(); ?>
+			</div><!-- .entry-meta -->
 		<?php endif; ?>
+
+		<div class="enter-header-decoration">
+			<div class="decoration-mark"></div>
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'aviator' ),
+				__( 'Read More', 'aviator' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>

@@ -2,9 +2,12 @@
 Blog Archives
 --------------------------------------------------------------*/
 
-article.post {
+article.post,
+article.page {
 
 	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ddd;
 
 	.entry-header {
 
@@ -20,7 +23,29 @@ article.post {
 		}
 
 		.entry-meta {
-			font-size: 0.9em;
+			font-weight: 500;
+			font-size: 0.85em;
+			color: #999;
+
+			a {
+				color: #666;
+				text-decoration: none;
+			}
+
+		}
+
+		.enter-header-decoration {
+
+			border-bottom: 1px solid #ddd;
+
+			.decoration-mark {
+				display: block;
+				width: 48px;
+				height: 4px;
+				background: #666;
+				margin: 2em 0;
+				margin-bottom: -1px;
+			}
 		}
 
 	}

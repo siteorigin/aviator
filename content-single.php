@@ -11,6 +11,11 @@
 		<div class="entry-meta">
 			<?php aviator_posted_on(); ?>
 		</div><!-- .entry-meta -->
+
+		<div class="enter-header-decoration">
+			<div class="decoration-mark"></div>
+		</div>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

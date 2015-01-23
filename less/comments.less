@@ -1,3 +1,115 @@
 /*--------------------------------------------------------------
 Comments
 --------------------------------------------------------------*/
+
+.comment-list {
+	margin: 0;
+
+	ol {
+		margin: 0 0 0 30px;
+	}
+
+	li {
+		padding: 15px;
+		background: #fff;
+
+		li {
+			background: #f8f8f8;
+		}
+	}
+
+	.comment {
+
+		.comment-text {
+
+		}
+
+	}
+}
+
+#respond {
+	margin-top: 40px;
+}
+
+#reply-title {
+}
+
+#commentform {
+	margin: 0 -7px;
+
+	p {
+		clear: both;
+		padding: 0 7px 14px 7px;
+		margin: 0;
+	}
+
+	.comment-notes,
+	.form-allowed-tags,
+	.logged-in-as {
+		padding-bottom: 14px;
+		font-size: 0.9em;
+		color: #999;
+
+		code {
+			font-size: 0.9em;
+		}
+	}
+
+	.logged-in-as {
+		padding-bottom: 0;
+	}
+
+	.comment-form-third {
+		width: 33.333%;
+		float: left;
+		padding: 0 7px;
+
+		input {
+			.border-radius(0px);
+			.box-sizing(border-box);
+			width: 100%;
+			padding: 10px;
+			border: 1px solid;
+			border-color: #eeeeee #f6f6f6 #fff #f6f6f6;
+			background: #efefef;
+		}
+	}
+
+	#comment {
+		.border-radius(0px);
+		.box-sizing(border-box);
+		width: 100%;
+		padding: 10px;
+		border: 1px solid;
+		border-color: #eeeeee #f6f6f6 #fff #f6f6f6;
+		background: #efefef;
+	}
+
+	.comment-form-comment {
+		padding-top: 14px;
+		label {
+			display: none;
+		}
+	}
+
+	.form-submit {
+		text-align: right;
+
+		input {
+			.transition(0.3s);
+			display: inline-block;
+			background-color: #333;
+			padding: 7px 11px;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			width: auto;
+			.box-shadow(none);
+			text-shadow: none;
+
+			&:hover {
+				background-color: #444;
+			}
+		}
+	}
+}

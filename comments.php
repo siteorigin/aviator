@@ -42,6 +42,7 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments( array(
 					'style'      => 'ol',
+					'callback' => 'aviator_single_comment',
 					'short_ping' => true,
 				) );
 			?>
