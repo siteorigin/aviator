@@ -9,21 +9,59 @@ Main Menus
 	margin-bottom: 30px;
 	.box-shadow( 0px 6px 0 rgba(0,0,0,0.075) );
 
+	font-size: 0.85em;
+
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		font-size: 0.85em;
 
 		li {
 			float: right;
 			margin-left: 10px;
+			position: relative;
 
 			a {
-				padding: 6px 0;
+				padding: 6px 6px;
 				color: #d9d3d3;
 				display: block;
 				text-decoration: none;
+			}
+			
+			ul {
+				background: lighten(#2a2525, 5%);
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-left: -65px;
+
+				width: 130px;
+				display: none;
+
+				li {
+					display: block;
+					margin: 0;
+					float: none;
+
+					a {
+						display: block;
+						padding: 7px 10px;
+					}
+
+					&:first-child a {
+						padding-top: 12px;
+					}
+
+					&:last-child a {
+						padding-bottom: 12px;
+					}
+				}
+			}
+
+			&:hover {
+				ul {
+					display: block;
+				}
 			}
 		}
 	}
