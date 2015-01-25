@@ -7,15 +7,49 @@
 
 if( !function_exists('aviator_single_comment') ) :
 function aviator_single_comment( $comment, $args, $depth ){
-	?>
-	<article id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
-		<div class="comment-avatar">
-		</div>
-		<div class="comment-text entry-content">
-			<?php echo comment_text() ?>
-		</div>
-	</article>
-	<?php
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) :
+		case 'pingback' :
+		case 'trackback' :
+			?>
+			<li class="post pingback">
+			<p><?php _e( 'Pingback:', 'clearly' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'clearly' ), ' ' ); ?></p>
+			<?php
+			break;
+		default :
+			?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+			<article id="comment-<?php comment_ID(); ?>" class="comment">
+				<footer>
+					<?php echo get_avatar( $comment, 50 ); ?>
+					<div class="comment-author">
+						<cite class="fn"><?php comment_author_link() ?></cite>
+					</div><!-- .comment-author -->
+
+
+					<div class="comment-meta commentmetadata">
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>"><?php
+								/* translators: 1: date, 2: time */
+								printf( __( '%1$s at %2$s', 'clearly' ), get_comment_date(), get_comment_time() );
+								?></time></a>
+
+							<span class="support">
+								<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+								<?php edit_comment_link( __( 'Edit', 'clearly' ), ' ' ); ?>
+							</span>
+					</div><!-- .comment-meta .commentmetadata -->
+
+					<?php if ( $comment->comment_approved == '0' ) : ?>
+						<em class="awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'clearly' ); ?></em>
+					<?php endif; ?>
+				</footer>
+
+				<div class="comment-content entry-content"><?php comment_text(); ?></div>
+			</article><!-- #comment-## -->
+
+			<?php
+			break;
+	endswitch;
 }
 endif;
 

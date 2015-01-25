@@ -3,7 +3,8 @@ Comments
 --------------------------------------------------------------*/
 
 .comment-list {
-	margin: 0;
+	margin: 0 0 40px 0;
+	list-style: none;
 
 	ol {
 		margin: 0 0 0 30px;
@@ -14,16 +15,93 @@ Comments
 		background: #fff;
 
 		li {
+			margin-top: 20px;
 			background: #f8f8f8;
 		}
 	}
 
-	.comment {
+	.children {
+		list-style: none;
+		margin-left: 75px;
+	}
 
-		.comment-text {
+	article {
 
+		.avatar {
+			float: left;
 		}
 
+		.comment-author, .awaiting-moderation, .comment-meta, .comment-content {
+			margin-left: 75px;
+		}
+
+		.comment-author{
+			color: #666;
+			font-size: 0.9em;
+			font-weight: bold;
+			line-height: 1em;
+			margin-bottom: 5px;
+
+			a{
+				color: inherit;
+				text-decoration: none;
+			}
+
+			cite {
+				font-style: normal;
+			}
+		}
+
+		.comment-meta {
+			font-size: 0.875em;
+			color: #999;
+			line-height: 1em;
+			margin-bottom: 10px;
+
+			a{
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.support {
+				display: inline-block;
+				margin-left: 15px;
+			}
+		}
+
+		.awaiting-moderation {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.entry-content {
+			font-size: 0.95em
+		}
+	}
+
+	> li.pingback {
+		margin-top: -28px;
+		> p {
+			font-size: 0.9em;
+			margin-bottom: 12px;
+			color: #53524f;
+
+			a{
+				text-decoration: none;
+			}
+		}
+
+		&:first-child {
+			margin-top: 0px;
+		}
+	}
+
+	.bypostauthor{
+		/* Change the comment by the post author */
+	}
+
+	#commentform {
+		margin-bottom: 40px;
 	}
 }
 

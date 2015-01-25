@@ -199,7 +199,8 @@ body.has-sidebar #secondary {
   box-sizing: border-box;
   width: 30%;
 }
-body.page-template-home-panels-php #primary {
+body.page-template-home-panels-php #primary,
+body.siteorigin-panels-home #primary {
   padding-right: 0;
   float: none;
   width: auto;
@@ -325,10 +326,11 @@ big {
 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ccc;
+  display: block;
+  background-color: #ddd;
   border: 0;
   height: 1px;
-  margin-bottom: 1.5em;
+  margin: 1em auto;
 }
 ul,
 ol {
@@ -735,8 +737,50 @@ Widgets
 .widget_search .search-submit {
   display: none;
 }
+#secondary .widget ul,
+#colophon .widget ul {
+  margin-left: 1.5em;
+}
+.textwidget {
+  margin: 1.5em 0 0;
+  color: #777;
+  margin-top: 0;
+}
+.textwidget > *:first-child {
+  margin-top: 0;
+}
 .textwidget > *:last-child {
   margin-bottom: 0;
+}
+.textwidget h1,
+.textwidget h2,
+.textwidget h3,
+.textwidget h4,
+.textwidget h5,
+.textwidget h6 {
+  clear: none;
+  margin: 1em 0;
+  color: #444;
+}
+.textwidget .more-link {
+  font-weight: 500;
+  text-decoration: none;
+}
+.textwidget .more-link:hover {
+  text-decoration: underline;
+}
+.textwidget > *:first-child {
+  margin-top: 0;
+}
+.textwidget > *:last-child {
+  margin-bottom: 0;
+}
+.so-widget-sow-features .textwidget h5 {
+  font-size: 1.35em;
+  margin-bottom: 0.5em;
+}
+.so-widget-sow-features .textwidget p {
+  margin-bottom: 0.5em;
 }
 /*--------------------------------------------------------------
 Content
@@ -865,7 +909,6 @@ Layout
 }
 #colophon {
   clear: both;
-  min-height: 250px;
   background: #2a2525;
   margin-top: 25px;
   -webkit-box-shadow: 0px -6px 0 rgba(0, 0, 0, 0.075);
@@ -884,7 +927,7 @@ Layout
   font-size: 0.8em;
   color: #878282;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 #colophon .site-info a {
   color: #a29c9c;
@@ -988,7 +1031,8 @@ Entry Content
 Comments
 --------------------------------------------------------------*/
 .comment-list {
-  margin: 0;
+  margin: 0 0 40px 0;
+  list-style: none;
 }
 .comment-list ol {
   margin: 0 0 0 30px;
@@ -998,7 +1042,76 @@ Comments
   background: #fff;
 }
 .comment-list li li {
+  margin-top: 20px;
   background: #f8f8f8;
+}
+.comment-list .children {
+  list-style: none;
+  margin-left: 75px;
+}
+.comment-list article .avatar {
+  float: left;
+}
+.comment-list article .comment-author,
+.comment-list article .awaiting-moderation,
+.comment-list article .comment-meta,
+.comment-list article .comment-content {
+  margin-left: 75px;
+}
+.comment-list article .comment-author {
+  color: #666;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+.comment-list article .comment-author a {
+  color: inherit;
+  text-decoration: none;
+}
+.comment-list article .comment-author cite {
+  font-style: normal;
+}
+.comment-list article .comment-meta {
+  font-size: 0.875em;
+  color: #999;
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+.comment-list article .comment-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+.comment-list article .comment-meta .support {
+  display: inline-block;
+  margin-left: 15px;
+}
+.comment-list article .awaiting-moderation {
+  display: block;
+  margin-bottom: 10px;
+}
+.comment-list article .entry-content {
+  font-size: 0.95em;
+}
+.comment-list > li.pingback {
+  margin-top: -28px;
+}
+.comment-list > li.pingback > p {
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  color: #53524f;
+}
+.comment-list > li.pingback > p a {
+  text-decoration: none;
+}
+.comment-list > li.pingback:first-child {
+  margin-top: 0px;
+}
+.comment-list .bypostauthor {
+  /* Change the comment by the post author */
+}
+.comment-list #commentform {
+  margin-bottom: 40px;
 }
 #respond {
   margin-top: 40px;

@@ -15,12 +15,38 @@ Widgets
 	display: none;
 }
 
+#secondary,
+#colophon{
+	.widget {
+		ul {
+			margin-left: 1.5em;
+		}
+	}
+}
+
 .textwidget {
+	.entry-content;
+	margin-top: 0;
+
+	> *:first-child{
+		margin-top: 0;
+	}
+
 	> *:last-child{
 		margin-bottom: 0;
 	}
 }
 
-#secondary {
+.so-widget-sow-features {
+	.textwidget {
 
+		h5 {
+			font-size: 1.35em;
+			margin-bottom: 0.5em;
+		}
+
+		p {
+			margin-bottom: 0.5em;
+		}
+	}
 }
