@@ -75,6 +75,17 @@ function aviator_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	add_theme_support( 'siteorigin-panels', array(
+		'home-page' => true,
+		'home-page-default' => 'default-home',
+		'home-demo-template' => 'home-panels.php',
+	) );
+
+	if( !function_exists('siteorigin_panels_render') ) {
+		// Lite version of Page Builder for basic rendering.
+		include get_template_directory() . '/inc/panels-lite/panels-lite.php';
+	}
 }
 endif; // aviator_setup
 add_action( 'after_setup_theme', 'aviator_setup' );
@@ -169,3 +180,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Page Builder compatibility files.
+ */
+include get_template_directory() . '/inc/panels.php';
+include get_template_directory() . '/inc/panels-missing-widgets.php';
