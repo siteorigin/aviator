@@ -1,45 +1,59 @@
-![Travis CI Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)
+Aviator Theme
+---------------
+Incredible performance backed by our dedicated support forum, Aviator is a sophisticated theme that offers a clean, dynamic appearance for businesses, portfolios and personal blogs. In a world of every increasing complexity of WordPress themes, Aviator takes a step back to give you only what you truly need to get your website online. Page Builder forms the backbone of Aviator, allowing you to create responsive layouts that adapt to mobile devices.
 
-_s
-===
+License
+---------------
+Influence WordPress Theme, Copyright 2014 Greg Priday
+Influence is distributed under the terms of the GNU GPL
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A sample custom header implementation in `inc/custom-header.php` that can be activated by uncommenting one line in `functions.php` and adding the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/extras.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/copyleft/gpl.html.
 
-Getting Started
+Influence WordPress Theme is derived from Underscores WordPress Theme, Copyright 2012 Automattic http://underscores.me/
+Underscores WordPress Theme is distributed under the terms of the GNU GPL
+
+External Resources
+---------------
+HTML5 Shiv, Copyright 2011 Alexander Farkas
+Released under a dual MIT/GPL2 License
+Source: https://code.google.com/p/html5shiv/
+
+FitVids, Copyright 2013 Chris Coyier
+Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+Source: http://fitvidsjs.com/
+
+Selectivizr, Copyright 2011 Keith Clark
+Freely distributable under the terms of the MIT license
+
+LESS Elements, Copyright 2011 Dmitry Fadeyev
+Dedicated to the public domain and is free for all uses, commercial or otherwise.
+
+FontAwesome Copyright 2012 Dave Gandy
+licensed under SIL OFL 1.1 <http://scripts.sil.org/OFL>
+
+The Cycle2 plugin is dual licensed under the MIT and GPL licenses.
+Copyright © 2012-2014 M. Alsup.
+
+Demo photographs are sourced from Pixabay. Licensed under public domain with confirmation from author.
+
+Change Log
 ---------------
 
-If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+**0.9.1**
+* Added responsive layout.
+* Added demo content.
+* Various design improvements.
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium`), and then you'll need to do a five-step find and replace on the name in all the templates.
-
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in style.css.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
-
-OR
-
-* Search for: `'_s'` and replace with: `'megatherium'`
-* Search for: `_s_` and replace with: `megatherium_`
-* Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium` in style.css.
-* Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `_s-` and replace with: `megatherium-`
-
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
-
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+**0.9**
+Initial release.
