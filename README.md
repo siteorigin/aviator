@@ -4,8 +4,8 @@ Incredible performance backed by our dedicated support forum, Aviator is a sophi
 
 License
 ---------------
-Influence WordPress Theme, Copyright 2014 Greg Priday
-Influence is distributed under the terms of the GNU GPL
+Aviator WordPress Theme, Copyright 2014 Greg Priday
+Aviator is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see http://www.gnu.org/copyleft/gpl.html.
 
-Influence WordPress Theme is derived from Underscores WordPress Theme, Copyright 2012 Automattic http://underscores.me/
+Aviator WordPress Theme is derived from Underscores WordPress Theme, Copyright 2012 Automattic http://underscores.me/
 Underscores WordPress Theme is distributed under the terms of the GNU GPL
 
 External Resources
