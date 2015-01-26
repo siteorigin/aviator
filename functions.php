@@ -125,11 +125,16 @@ add_action( 'widgets_init', 'aviator_widgets_init' );
  * Enqueue scripts and styles.
  */
 function aviator_scripts() {
+	$js_suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
 	wp_enqueue_style( 'aviator-style', get_stylesheet_uri(), array(), SITEORIGIN_THEME_VERSION );
 
-	wp_enqueue_script( 'aviator-navigation', get_template_directory_uri() . '/js/navigation.js', array(), SITEORIGIN_THEME_VERSION, true );
+	wp_enqueue_script( 'aviator-navigation', get_template_directory_uri() . '/js/navigation' . $js_suffix . '.js', array(), SITEORIGIN_THEME_VERSION, true );
 
-	wp_enqueue_script( 'aviator-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), SITEORIGIN_THEME_VERSION, true );
+	wp_enqueue_script( 'aviator-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $js_suffix . '.js', array(), SITEORIGIN_THEME_VERSION, true );
+
+	wp_enqueue_script( 'aviator-fitvids', get_template_directory_uri() . '/js/jquery.fitvids' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION, true );
+	wp_enqueue_script( 'aviator-theme', get_template_directory_uri() . '/js/theme' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
