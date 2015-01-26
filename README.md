@@ -50,6 +50,10 @@ Demo photographs are sourced from Pixabay. Licensed under public domain with con
 Change Log
 ---------------
 
+**0.9.2**
+* Fixed theme name in readme.
+* Added translation to Page Builder Prebuilt layouts.
+
 **0.9.1**
 * Added responsive layout.
 * Added demo content.
