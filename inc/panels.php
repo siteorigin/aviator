@@ -23,7 +23,7 @@ function aviator_prebuilt_page_layouts($layouts){
 							array (
 								0 =>
 									array (
-										'background_image' => 673,
+										'background_image' => false,
 										'background_image_type' => 'cover',
 										'foreground_image' => 0,
 										'url' => '',
@@ -58,7 +58,7 @@ function aviator_prebuilt_page_layouts($layouts){
 										'icon' => 'fontawesome-heart',
 										'icon_color' => '#FFFFFF',
 										'icon_image' => 0,
-										'title' => 'Simple and Free',
+										'title' => __('Simple and Free', 'aviator'),
 										'text' => 'Praesent semper, ex quis mollis dictum, mauris enim sollicitudin mi, quis aliquet lorem odio vel augue. Aliquam ac nisl scelerisque, tempus elit a, tempor lectus. Aenean vel vehicula lectus.',
 										'more_text' => 'Download Now',
 										'more_url' => '#',
@@ -69,7 +69,7 @@ function aviator_prebuilt_page_layouts($layouts){
 										'icon' => 'fontawesome-cubes',
 										'icon_color' => '#FFFFFF',
 										'icon_image' => 0,
-										'title' => 'Advanced Builder',
+										'title' => __('Advanced Builder', 'aviator'),
 										'text' => 'Praesent semper, ex quis mollis dictum, mauris enim sollicitudin mi, quis aliquet lorem odio vel augue. Aliquam ac nisl scelerisque, tempus elit a, tempor lectus. Aenean vel vehicula lectus.',
 										'more_text' => 'Try Now',
 										'more_url' => '#',
@@ -80,7 +80,7 @@ function aviator_prebuilt_page_layouts($layouts){
 										'icon' => 'fontawesome-magic',
 										'icon_color' => '#FFFFFF',
 										'icon_image' => 0,
-										'title' => 'Simple Setup',
+										'title' => __('Simple Setup', 'aviator'),
 										'text' => 'Praesent semper, ex quis mollis dictum, mauris enim sollicitudin mi, quis aliquet lorem odio vel augue. Aliquam ac nisl scelerisque, tempus elit a, tempor lectus. Aenean vel vehicula lectus.',
 										'more_text' => 'Setup Now',
 										'more_url' => '#',
@@ -111,9 +111,9 @@ function aviator_prebuilt_page_layouts($layouts){
 					array (
 						'type' => 'html',
 						'title' => '',
-						'text' => '<h1 style="text-align: center;">This is a Visual Editor</h1>
+						'text' => '<h1 style="text-align: center;">' . __('This is a Visual Editor', 'aviator') . '</h1>
 <hr style="max-width:400px;" />
-<h3 style="text-align: center;">It\'s Amazing What You Can Accomplish</h3>',
+<h3 style="text-align: center;">' . __("It's Amazing What You Can Accomplish", 'aviator') . '</h3>',
 						'filter' => '1',
 						'panels_info' =>
 							array (
