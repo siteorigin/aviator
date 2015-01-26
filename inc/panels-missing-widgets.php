@@ -28,9 +28,12 @@ function aviator_panels_missing_widgets($code, $widget, $args, $instance){
 add_filter('siteorigin_panels_missing_widget', 'aviator_panels_missing_widgets', 10, 4);
 
 function aviator_panels_missing_widgets_slider($instance, $args){
-	wp_enqueue_script('aviator-demo-slider-cycle', get_template_directory_uri() . '/demo/slider/js/jquery.cycle.js', array('jquery'), SITEORIGIN_THEME_VERSION);
-	wp_enqueue_script('aviator-demo-slider-cycle-swipe', get_template_directory_uri() . '/demo/slider/js/jquery.cycle.swipe.js', array('jquery'), SITEORIGIN_THEME_VERSION);
-	wp_enqueue_script('aviator-demo-slider', get_template_directory_uri() . '/demo/slider/js/slider.js', array('jquery'), SITEORIGIN_THEME_VERSION);
+	$js_suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+	wp_enqueue_script('aviator-demo-slider-cycle', get_template_directory_uri() . '/demo/slider/js/jquery.cycle' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION);
+	wp_enqueue_script('aviator-demo-slider-cycle-swipe', get_template_directory_uri() . '/demo/slider/js/jquery.cycle.swipe' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION);
+	wp_enqueue_script('aviator-demo-slider', get_template_directory_uri() . '/demo/slider/js/slider' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION);
+	
 	wp_enqueue_style('aviator-demo-slider', get_template_directory_uri() . '/demo/slider/css/slider.css', array(), SITEORIGIN_THEME_VERSION);
 
 	get_template_part('demo/slider/slider');
