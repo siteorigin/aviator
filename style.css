@@ -2,24 +2,12 @@
 Theme Name: Aviator
 Author: Greg Priday
 Author URI: http://siteorigin.com/
-Description: A very minimal WordPress theme.
-Version: 0.9
+Description: Incredible performance backed by our dedicated support forum, Aviator is a sophisticated theme that offers a clean, dynamic appearance for businesses, portfolios and personal blogs. In a world of every increasing complexity of WordPress themes, Aviator takes a step back to give you only what you truly need to get your website online. Page Builder forms the backbone of Aviator, allowing you to create responsive layouts that adapt to mobile devices.
+Version: 0.9.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl.html
 Text Domain: aviator
-Tags: translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Aviator is copyright Greg Priday 2014.
-
-Aviator is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
+Tags: translation-ready, responsive
 */
 /*--------------------------------------------------------------
 Reset
@@ -204,6 +192,16 @@ body.siteorigin-panels-home #primary {
   padding-right: 0;
   float: none;
   width: auto;
+}
+@media (max-width: 800px) {
+  body.has-sidebar #primary {
+    float: none;
+    width: auto;
+  }
+  body.has-sidebar #secondary {
+    float: none;
+    width: auto;
+  }
 }
 a {
   color: #1fa7da;
@@ -904,8 +902,17 @@ object {
 Layout
 --------------------------------------------------------------*/
 .container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 1020px;
   margin: 0 auto;
+}
+@media (max-width: 1080px) {
+  .container {
+    width: auto;
+    margin: 0 30px;
+  }
 }
 #colophon {
   clear: both;
