@@ -153,6 +153,7 @@ Masthead
 --------------------------------------------------------------*/
 #masthead .site-branding {
   margin-bottom: 30px;
+  font-family: 'Maven Pro', sans-serif;
 }
 #masthead .site-branding h1 {
   color: #333;
@@ -167,6 +168,10 @@ Masthead
   color: #777;
   font-size: 16px;
   margin-bottom: 0;
+}
+#masthead .site-branding h1,
+#masthead .site-branding h2 {
+  line-height: 1.25em;
 }
 body {
   background: #FAFAFA;
