@@ -5,11 +5,12 @@ Masthead
 #masthead {
 	.site-branding {
 		margin-bottom: 30px;
-		font-family: 'Maven Pro', sans-serif;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 300;
 
 		h1 {
 			color: #333;
-			font-size: 30px;
+			font-size: 32px;
 			margin-bottom: 0;
 
 			a {
@@ -26,6 +27,12 @@ Masthead
 
 		h1,h2 {
 			line-height: 1.25em;
+		}
+	}
+
+	@media (max-width: 680px) {
+		& .site-branding {
+			text-align: center;
 		}
 	}
 }

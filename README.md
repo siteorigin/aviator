@@ -50,6 +50,11 @@ Demo photographs are sourced from Pixabay. Licensed under public domain with con
 Change Log
 ---------------
 
+**0.9.3**
+* Added fallback rendering for visual editor widget in Page Builder.
+* Removed unused rtl.css.
+* Changed site title font to Maven Pro.
+
 **0.9.2**
 * Fixed theme name in readme.
 * Added translation to Page Builder Prebuilt layouts.

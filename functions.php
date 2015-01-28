@@ -92,7 +92,7 @@ function aviator_setup() {
 	}
 
 	// Add Maven Pro, the logo font
-	siteorigin_webfonts_add_font( 'Maven+Pro', array(400) );
+	siteorigin_webfonts_add_font( 'Raleway', array(300) );
 }
 endif; // aviator_setup
 add_action( 'after_setup_theme', 'aviator_setup' );
