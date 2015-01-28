@@ -53,7 +53,7 @@ Change Log
 **0.9.3**
 * Added fallback rendering for visual editor widget in Page Builder.
 * Removed unused rtl.css.
-* Changed site title font to Maven Pro.
+* Changed site title font to Railway.
 
 **0.9.2**
 * Fixed theme name in readme.
