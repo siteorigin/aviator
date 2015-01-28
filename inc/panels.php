@@ -60,7 +60,7 @@ function aviator_prebuilt_page_layouts($layouts){
 										'icon_image' => 0,
 										'title' => __('Simple and Free', 'aviator'),
 										'text' => 'Praesent semper, ex quis mollis dictum, mauris enim sollicitudin mi, quis aliquet lorem odio vel augue. Aliquam ac nisl scelerisque, tempus elit a, tempor lectus. Aenean vel vehicula lectus.',
-										'more_text' => 'Download Now',
+										'more_text' => __('Download Now', 'aviator'),
 										'more_url' => '#',
 									),
 								1 =>
@@ -71,7 +71,7 @@ function aviator_prebuilt_page_layouts($layouts){
 										'icon_image' => 0,
 										'title' => __('Advanced Builder', 'aviator'),
 										'text' => 'Praesent semper, ex quis mollis dictum, mauris enim sollicitudin mi, quis aliquet lorem odio vel augue. Aliquam ac nisl scelerisque, tempus elit a, tempor lectus. Aenean vel vehicula lectus.',
-										'more_text' => 'Try Now',
+										'more_text' => __('Try Now', 'aviator'),
 										'more_url' => '#',
 									),
 								2 =>
@@ -82,7 +82,7 @@ function aviator_prebuilt_page_layouts($layouts){
 										'icon_image' => 0,
 										'title' => __('Simple Setup', 'aviator'),
 										'text' => 'Praesent semper, ex quis mollis dictum, mauris enim sollicitudin mi, quis aliquet lorem odio vel augue. Aliquam ac nisl scelerisque, tempus elit a, tempor lectus. Aenean vel vehicula lectus.',
-										'more_text' => 'Setup Now',
+										'more_text' => __('Setup Now', 'aviator'),
 										'more_url' => '#',
 									),
 							),

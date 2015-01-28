@@ -5,6 +5,8 @@
  * @package aviator
  */
 
+include get_template_directory() . '/extras/webfonts/webfonts.php';
+
 define('SITEORIGIN_THEME_VERSION', 'dev');
 
 /**
@@ -88,6 +90,9 @@ function aviator_setup() {
 		// Lite version of Page Builder for basic rendering.
 		include get_template_directory() . '/inc/panels-lite/panels-lite.php';
 	}
+
+	// Add Maven Pro, the logo font
+	siteorigin_webfonts_add_font( 'Raleway', array(300) );
 }
 endif; // aviator_setup
 add_action( 'after_setup_theme', 'aviator_setup' );

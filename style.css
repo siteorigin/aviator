@@ -153,10 +153,12 @@ Masthead
 --------------------------------------------------------------*/
 #masthead .site-branding {
   margin-bottom: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
 }
 #masthead .site-branding h1 {
   color: #333;
-  font-size: 30px;
+  font-size: 32px;
   margin-bottom: 0;
 }
 #masthead .site-branding h1 a {
@@ -168,8 +170,17 @@ Masthead
   font-size: 16px;
   margin-bottom: 0;
 }
+#masthead .site-branding h1,
+#masthead .site-branding h2 {
+  line-height: 1.25em;
+}
+@media (max-width: 680px) {
+  #masthead .site-branding {
+    text-align: center;
+  }
+}
 body {
-  background: #FAFAFA;
+  background: #f9f9f9;
 }
 body.has-sidebar #primary {
   padding-right: 20px;
@@ -575,7 +586,7 @@ Main Menus
   position: relative;
 }
 #site-navigation div > ul > li > a {
-  padding: 14px 25px;
+  padding: 16px 25px;
   color: #555;
   font-weight: 500;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -908,10 +919,10 @@ Layout
   width: 1020px;
   margin: 0 auto;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1050px) {
   .container {
     width: auto;
-    margin: 0 30px;
+    margin: 0 15px;
   }
 }
 #colophon {
