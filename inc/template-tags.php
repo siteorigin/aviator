@@ -258,3 +258,58 @@ function aviator_category_transient_flusher() {
 }
 add_action( 'edit_category', 'aviator_category_transient_flusher' );
 add_action( 'save_post',     'aviator_category_transient_flusher' );
+
+if(!function_exists('aviator_display_logo')):
+/**
+ * Display the logo
+ */
+function aviator_display_logo(){
+	$logo = siteorigin_setting( 'branding_logo' );
+	$logo = apply_filters('aviator_logo_image_id', $logo);
+
+	if( empty($logo) ) {
+		if ( function_exists( 'jetpack_the_site_logo' ) && jetpack_has_site_logo() ) {
+			// We'll let Jetpack handle things
+			jetpack_the_site_logo();
+			return;
+		}
+
+		// Just display the site title
+		$logo_html = '<h1 class="site-title">'.get_bloginfo( 'name' ).'</h1>';
+		$logo_html = apply_filters('aviator_logo_text', $logo_html);
+	}
+	else {
+		// load the logo image
+		if(is_array($logo)) {
+			list ($src, $height, $width) = $logo;
+		}
+		else {
+			$image = wp_get_attachment_image_src($logo, 'full');
+			$src = $image[0];
+			$height = $image[2];
+			$width = $image[1];
+		}
+
+		// Add all the logo attributes
+		$logo_attributes = apply_filters('aviator_logo_image_attributes', array(
+			'src' => $src,
+			'width' => round($width),
+			'height' => round($height),
+			'alt' => sprintf( __('%s Logo', 'aviator'), get_bloginfo('name') ),
+		) );
+
+		$logo_attributes_str = array();
+		if( !empty( $logo_attributes ) ) {
+			foreach($logo_attributes as $name => $val) {
+				if( empty($val) ) continue;
+				$logo_attributes_str[] = $name.'="'.esc_attr($val).'" ';
+			}
+		}
+
+		$logo_html = apply_filters('aviator_logo_image', '<img '.implode( ' ', $logo_attributes_str ).' />');
+	}
+
+	// Echo the image
+	echo apply_filters('aviator_logo_html', $logo_html);
+}
+endif;

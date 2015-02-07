@@ -5,6 +5,20 @@
  */
 function aviator_settings_init(){
 
+	// The branding section
+
+	siteorigin_settings_add_section( 'branding', __('Branding', 'aviator') );
+
+	siteorigin_settings_add_field('branding', 'logo', 'media', __('Logo', 'aviator'), array(
+		'description' => __('Logo displayed in your masthead.', 'aviator')
+	) );
+
+	siteorigin_settings_add_field('branding', 'description', 'checkbox', __('Site Description', 'aviator'), array(
+		'description' => __('Display site description under the site title.', 'aviator')
+	) );
+
+	// Navigation section
+
 	siteorigin_settings_add_section( 'navigation', __('Navigation', 'aviator') );
 
 	siteorigin_settings_add_field('navigation', 'sticky_menu', 'checkbox', __('Sticky Menu', 'aviator'), array(
@@ -21,6 +35,9 @@ add_action('siteorigin_settings_init', 'aviator_settings_init');
  * @return mixed
  */
 function aviator_settings_defaults( $defaults ){
+	$defaults['branding_logo'] = false;
+	$defaults['branding_description'] = true;
+
 	$defaults['navigation_sticky_menu'] = true;
 
 	return $defaults;

@@ -34,16 +34,11 @@
 
 	<header id="masthead" class="site-header container" role="banner">
 		<div class="site-branding">
-			<?php
-			if ( function_exists( 'jetpack_the_site_logo' ) && jetpack_has_site_logo() ) {
-				jetpack_the_site_logo();
-			}
-			else {
-				?><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1><?php
-			}
-			?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<?php aviator_display_logo(); ?>
+			</a>
 
-			<?php if( get_bloginfo('description') ) : ?>
+			<?php if( get_bloginfo('description') && siteorigin_setting('branding_description') ) : ?>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php endif; ?>
 
