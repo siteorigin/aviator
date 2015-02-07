@@ -45,6 +45,10 @@ licensed under SIL OFL 1.1 <http://scripts.sil.org/OFL>
 The Cycle2 plugin is dual licensed under the MIT and GPL licenses.
 Copyright © 2012-2014 M. Alsup.
 
+Sticky Plugin v1.0.0 for jQuery
+Licensed under MIT license <https://github.com/garand/sticky/blob/master/LICENSE.md>
+Copyright 2014 Anthony Garand http://garand.me
+
 Demo photographs are sourced from Pixabay. Licensed under public domain with confirmation from author.
 
 Change Log
