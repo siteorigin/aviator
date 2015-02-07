@@ -50,6 +50,12 @@ Demo photographs are sourced from Pixabay. Licensed under public domain with con
 Change Log
 ---------------
 
+**0.9.4**
+* Added theme settings component.
+* Added sticky menu and setting.
+* Added logo setting.
+* Added fallback for carousel widget.
+
 **0.9.3**
 * Added fallback rendering for visual editor widget in Page Builder.
 * Removed unused rtl.css.
