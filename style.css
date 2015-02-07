@@ -160,14 +160,14 @@ Masthead
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
+#masthead .site-branding a {
+  color: inherit;
+  text-decoration: none;
+}
 #masthead .site-branding h1 {
   color: #333;
   font-size: 32px;
   margin-bottom: 0;
-}
-#masthead .site-branding h1 a {
-  color: inherit;
-  text-decoration: none;
 }
 #masthead .site-branding h2 {
   color: #777;
@@ -548,7 +548,7 @@ Main Menus
   clear: both;
   display: block;
   width: 100%;
-  z-index: 999;
+  z-index: 1010;
 }
 #site-navigation:before,
 #site-navigation:after {
