@@ -1,6 +1,6 @@
 <?php if(have_posts()) : ?>
 	<div class="sow-carousel-title">
-		<?php _e('Latest Posts', 'aviator') ?>
+		<h3 class="widget-title"><?php _e('Latest Posts', 'aviator') ?></h3>
 
 		<a href="#" class="sow-carousel-next" title="<?php esc_attr_e('Next', 'siteorigin-widgets') ?>"></a>
 		<a href="#" class="sow-carousel-previous" title="<?php esc_attr_e('Previous', 'siteorigin-widgets') ?>"></a>
