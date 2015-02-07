@@ -2,7 +2,7 @@
 Theme Name: Aviator
 Author: Greg Priday
 Author URI: http://siteorigin.com/
-Description: Incredible performance backed by our dedicated support forum, Aviator is a sophisticated theme that offers a clean, dynamic appearance for businesses, portfolios and personal blogs. In a world of every increasing complexity of WordPress themes, Aviator takes a step back to give you only what you truly need to get your website online. Page Builder forms the backbone of Aviator, allowing you to create responsive layouts that adapt to mobile devices. We offer free support on our support <a href="http://siteorigin.com/thread/">forums</a> (http://siteorigin.com/thread/).
+Description: Incredible performance backed by our dedicated support forum, Aviator is a sophisticated theme that offers a clean, dynamic appearance for businesses, portfolios and personal blogs. In a world of ever increasing complexity of WordPress themes, Aviator takes a step back to give you only what you truly need to get your website online. Page Builder forms the backbone of Aviator, allowing you to create responsive layouts that adapt to mobile devices. We offer free support on our support <a href="http://siteorigin.com/thread/">forums</a> (http://siteorigin.com/thread/).
 Version: dev
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -151,19 +151,23 @@ a img {
 /*--------------------------------------------------------------
 Masthead
 --------------------------------------------------------------*/
+#masthead {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 #masthead .site-branding {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
+}
+#masthead .site-branding a {
+  color: inherit;
+  text-decoration: none;
 }
 #masthead .site-branding h1 {
   color: #333;
   font-size: 32px;
   margin-bottom: 0;
-}
-#masthead .site-branding h1 a {
-  color: inherit;
-  text-decoration: none;
 }
 #masthead .site-branding h2 {
   color: #777;
@@ -544,25 +548,7 @@ Main Menus
   clear: both;
   display: block;
   width: 100%;
-  margin: 20px 0;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmOWY5ZjkiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
-  background-image: -webkit-linear-gradient(top, #f9f9f9, #f2f2f2);
-  background-image: -moz-linear-gradient(top, #f9f9f9, #f2f2f2);
-  background-image: -o-linear-gradient(top, #f9f9f9, #f2f2f2);
-  background-image: linear-gradient(to bottom, #f9f9f9, #f2f2f2);
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0;
-  -webkit-border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
-  -moz-background-clip: padding;
-  border-radius: 3px;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px #ffffff;
-  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px #ffffff;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px #ffffff;
-  border: 1px solid #d5d5d5;
+  z-index: 1010;
 }
 #site-navigation:before,
 #site-navigation:after {
@@ -573,7 +559,30 @@ Main Menus
   clear: both;
 }
 #site-navigation div {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmOWY5ZjkiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+  background-image: -webkit-linear-gradient(top, #f9f9f9, #f2f2f2);
+  background-image: -moz-linear-gradient(top, #f9f9f9, #f2f2f2);
+  background-image: -o-linear-gradient(top, #f9f9f9, #f2f2f2);
+  background-image: linear-gradient(to bottom, #f9f9f9, #f2f2f2);
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px #ffffff;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px #ffffff;
+  border: 1px solid #d5d5d5;
   font-size: 0.95em;
+}
+#site-navigation div:before,
+#site-navigation div:after {
+  content: " ";
+  display: table;
+}
+#site-navigation div:after {
+  clear: both;
 }
 #site-navigation div > ul {
   list-style: none;
@@ -654,6 +663,21 @@ Main Menus
 #site-navigation a {
   display: block;
   text-decoration: none;
+}
+#site-navigation-sticky-wrapper.is-sticky div {
+  border-top: 0;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topright: 0px;
+  -moz-background-clip: padding;
+  border-top-right-radius: 0px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /*--------------------------------------------------------------
 Accessibility
