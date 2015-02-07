@@ -6,6 +6,7 @@
  */
 
 include get_template_directory() . '/extras/webfonts/webfonts.php';
+include get_template_directory() . '/extras/settings/settings.php';
 
 define('SITEORIGIN_THEME_VERSION', 'dev');
 
@@ -25,6 +26,8 @@ if ( ! function_exists( 'aviator_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function aviator_setup() {
+
+	siteorigin_settings_init();
 
 	/*
 	 * Make theme available for translation.
@@ -138,8 +141,13 @@ function aviator_scripts() {
 
 	wp_enqueue_script( 'aviator-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . $js_suffix . '.js', array(), SITEORIGIN_THEME_VERSION, true );
 
+	wp_enqueue_script( 'aviator-sticky', get_template_directory_uri() . '/js/jquery.sticky' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION, true );
 	wp_enqueue_script( 'aviator-fitvids', get_template_directory_uri() . '/js/jquery.fitvids' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION, true );
 	wp_enqueue_script( 'aviator-theme', get_template_directory_uri() . '/js/theme' . $js_suffix . '.js', array('jquery'), SITEORIGIN_THEME_VERSION, true );
+
+	wp_localize_script( 'aviator-theme', 'aviator', array(
+		'navSticky' => siteorigin_setting('navigation_sticky_menu')
+	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -198,3 +206,8 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 include get_template_directory() . '/inc/panels.php';
 include get_template_directory() . '/inc/panels-missing-widgets.php';
+
+/**
+ * Theme settings configurations.
+ */
+include get_template_directory() . '/inc/settings.php';
