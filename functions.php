@@ -10,13 +10,6 @@ include get_template_directory() . '/extras/settings/settings.php';
 
 define('SITEORIGIN_THEME_VERSION', 'dev');
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 694; /* pixels */
-}
-
 if ( ! function_exists( 'aviator_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -53,7 +46,7 @@ function aviator_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -99,6 +92,18 @@ function aviator_setup() {
 }
 endif; // aviator_setup
 add_action( 'after_setup_theme', 'aviator_setup' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function aviator_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'aviator_content_width', 694 );
+}
+add_action( 'after_setup_theme', 'aviator_content_width', 0 );
 
 /**
  * Register widget area.
