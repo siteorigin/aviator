@@ -2,7 +2,7 @@
 /**
  * Integrates this theme with SiteOrigin Page Builder.
  *
- * @package vantage
+ * @package aviator
  * @since 1.0
  * @license GPL 2.0
  */
