@@ -101,7 +101,8 @@ add_action( 'after_setup_theme', 'aviator_setup' );
  * @global int $content_width
  */
 function aviator_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'aviator_content_width', 694 );
+	global $content_width;
+	$content_width = apply_filters( 'aviator_content_width', 694 );
 }
 add_action( 'after_setup_theme', 'aviator_content_width', 0 );
 
