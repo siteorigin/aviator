@@ -54,6 +54,11 @@ Demo photographs are sourced from Pixabay. Licensed under public domain with con
 Change Log
 ---------------
 
+**1.0**
+* Fixed sticky menu for mobile with admin bar.
+* Fixed translation domains.
+* Framework updates.
+
 **0.9.4**
 * Added theme settings component.
 * Added sticky menu and setting.
